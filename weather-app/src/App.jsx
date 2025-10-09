@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 
 const weatherData = [
   { day: "Sunday", date: "1 October", icon: "🌦️", desc: "Drizzling" },
@@ -11,11 +12,13 @@ const weatherData = [
 ];
 
 function App() {
+
+// const url = 'https://api.openweathermap.org/data/2.5/weather?q=Accra&appid=3e88407fe683d9781c0fdd14baae7e76'
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col items-center justify-start text-center p-4 font-sans"
       style={{
-        backgroundImage: "url('/src/assets/images/sunrise.jpg')",
+        backgroundImage: "url('/src/assets/sunrise.jpg')",
       }}
     >
       {/* Header */}
@@ -25,7 +28,7 @@ function App() {
       <br />
       <br />
       <br />
-      <h2 className="left-0 text-5xl sm:text-6xl font-bold text-gray-900 drop-shadow-md mt-2">
+      <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 drop-shadow-md mt-2">
         Accra, Ghana
       </h2>
       <br />
